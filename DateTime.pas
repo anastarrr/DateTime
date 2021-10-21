@@ -22,6 +22,14 @@ begin
   end;
 end;
 
+function DaysInYear(year: integer): integer;
+begin
+  assert(year > 0, 'year > 0');
+  var y1 := DateTime.Create(year, 1, 1);
+  var y2 := DateTime.Create(year + 1, 1, 1);
+  result := (y2 - y1).Days;
+end;
+
 begin
   
 end. 
