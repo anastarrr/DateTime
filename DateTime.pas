@@ -40,5 +40,8 @@ begin
 end;
 
 begin
-  
+  assert(DaysInYearRange(2021,2024) = 1461);
+  assert(DaysInYearRange(2021,2023) = 1095);
+  assert(DaysInYear(2021) = 365);
+  assert(DaysInYear(2020) = 366);
 end. 
