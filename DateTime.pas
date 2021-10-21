@@ -30,6 +30,15 @@ begin
   result := (y2 - y1).Days;
 end;
 
+function DaysInYearRange(year1, year2: integer): integer;
+begin
+  assert(year1 > 0, 'year1 > 0');
+  assert(year2 > 0, 'year2 > 0');
+  var y1 := DateTime.Create(year1, 1, 1);
+  var y2 := DateTime.Create(year2 + 1, 1, 1);
+  result := abs((y2 - y1).Days);
+end;
+
 begin
   
 end. 
