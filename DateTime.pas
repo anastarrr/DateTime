@@ -39,9 +39,16 @@ begin
   result := abs((y2 - y1).Days);
 end;
 
+function SecondsInHours(hours: integer): integer;
+begin
+  result := hours * 3600;
+end;
+
 begin
   assert(DaysInYearRange(2021,2024) = 1461);
   assert(DaysInYearRange(2021,2023) = 1095);
   assert(DaysInYear(2021) = 365);
   assert(DaysInYear(2020) = 366);
+  assert(SecondsInHours(1) = 3600);
+  assert(SecondsInHours(2) = 7200);
 end. 
